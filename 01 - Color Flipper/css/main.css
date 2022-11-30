@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* === Fonts === */
+/* === fonts === */
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Roboto&display=swap');
 
 html {
@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  /* === Primary Colors === */
+  /* === primary colors === */
   --primary-100: #ffb86a;
   --primary-200: #ffac51;
   --primary-300: #ffa138;
@@ -23,7 +23,7 @@ html {
   --primary-800: #b36004;
   --primary-900: #995204;
 
-  /* === Gray Colors === */
+  /* === gray colors === */
   --gray-50: #f8fafc;
   --gray-100: #f1f5f9;
   --gray-200: #e2e8f0;
@@ -35,22 +35,22 @@ html {
   --gray-800: #1e293b;
   --gray-900: #0f172a;
 
-  /* === Black and White === */
+  /* === black and white === */
   --black: #222;
   --white: #fff;
 
-  /* === Alert Colors === */
+  /* === alert colors === */
   --red-light: #f8d7da;
   --red-dark: #842029;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
 
-  /* === Fonts === */
+  /* === fonts === */
   --headingFont: 'Roboto', sans-serif;
   --bodyFont: 'Karla', sans-serif;
   --smallText: 0.7em;
 
-  /* === Another Settings === */
+  /* === extra settings === */
   --backgroundColor: var(--gray-50);
   --textColor: var(--gray-900);
   --borderRadius: 0.5rem;
@@ -60,14 +60,14 @@ html {
   --min-width: 300px;
   --fixed-width: 600px;
 
-  /* === Box-Shadow === */
+  /* === box-shadow === */
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* === Global Settings === */
+/* === global settings === */
 
 body {
   background: var(--backgroundColor);
@@ -123,43 +123,7 @@ ul {
   padding: 0;
 }
 
-.img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-/* === Buttons === */
-
-.btn-container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 1rem;
-}
-
-.btn {
-  cursor: pointer;
-  color: var(--white);
-  background: var(--primary-500);
-  border: 1px solid var(--primary-500);
-  border-radius: var(--borderRadius);
-  letter-spacing: var(--letterSpacing);
-  padding: 0.575rem 0.75rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  box-shadow: var(--shadow-1);
-  transition: var(--transition);
-  text-transform: capitalize;
-  display: inline-block;
-}
-
-.btn:hover {
-  background: transparent;
-  color: var(--primary-500);
-  box-shadow: var(--shadow-3);
-}
-
-/* === Navbar === */
+/* === navbar === */
 
 .nav-container {
   background: var(--white);
@@ -203,7 +167,7 @@ ul {
   color: var(--primary-500);
 }
 
-/* === Main Content === */
+/* === container === */
 
 .container {
   position: absolute;
@@ -228,7 +192,37 @@ ul {
   text-transform: uppercase
 }
 
-/* === Media Queries === */
+/* === buttons === */
+
+.btn-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: 1px solid var(--primary-500);
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.575rem 0.75rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--primary-500);
+  box-shadow: var(--shadow-3);
+}
+
+/* === media queries === */
 
 @media screen and (min-width: 664px) {
   .nav-center {
