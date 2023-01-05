@@ -1,0 +1,240 @@
+*,::after,::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Roboto&display=swap');
+
+html {
+  font-size: 100%;
+}
+
+:root {
+  /* === primary colors === */
+  --primary-100: #f79f94;
+  --primary-200: #f68f82;
+  --primary-300: #f57f70;
+  --primary-400: #f36f5e;
+  --primary-500: #f25f4c;
+  --primary-600: #da5644;
+  --primary-700: #c24c3d;
+  --primary-800: #a94335;
+  --primary-900: #91392e;
+
+  /* === gray colors === */
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+
+  /* === black and white === */
+  --black: #222;
+  --white: #fff;
+
+  /* === alert colors === */
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* === fonts === */
+  --headingFont: 'Roboto', sans-serif;
+  --bodyFont: 'Karla', sans-serif;
+  --smallText: 0.7em;
+
+  /* === another settings === */
+  --backgroundColor: var(--gray-50);
+  --textColor: var(--gray-900);
+  --borderRadius: 0.5rem;
+  --letterSpacing: 0.2rem;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --min-width: 300px;
+  --fixed-width: 600px;
+
+  /* === box-shadow === */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* === global settings === */
+
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small, .text-small {
+  font-size: var(--smallText);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* === title === */
+
+.title-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.underline {
+  height: 5px;
+  border-radius: var(--borderRadius);
+  width: 150px;
+  background-color: var(--primary-500);
+  margin: auto;
+}
+
+/* === container === */
+
+.black-background {
+  position: relative;
+  background: var(--black);
+  height: 50vh;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--borderRadius);
+  background: var(--white);
+  width: 90vw;
+  max-width: 700px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-3);
+  text-align: center;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 137px;
+  background: var(--gray-100);
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+  z-index: -10;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.container h5 {
+  color: var(--gray-400);
+}
+
+.person-name {
+  color: var(--gray-800);
+}
+
+.informations {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  transition: var(--transition);
+}
+
+.icon:hover, .active {
+  color: var(--primary-500);
+}
+
+/* === img === */
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 10;
+  background: var(--white);
+  width: 150px;
+  height: 150px;
+  padding: 0.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-2);
+}
+
+/* === buttons === */
+
+.btn {
+  cursor: pointer;
+  background: var(--primary-500);
+  color: var(--white);
+  border: none;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 1rem;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow-1);
+  background: var(--primary-100);
+}
